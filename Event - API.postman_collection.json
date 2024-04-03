@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "660f6473-0ff7-47d8-889c-03247667d2d7",
+		"name": "Event - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24797471"
+	},
+	"item": [
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"anant004\",\r\n    \"password\":\"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/register/"
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"anant004\",\r\n    \"password\":\"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/events/"
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyMTU3ODAwLCJpYXQiOjE3MTIxNTY5MDAsImp0aSI6IjhkODE2MWJiMGJmODQzNTFiYWI4YmJlZjkzZDJkY2UxIiwidXNlcl9pZCI6Mn0.YajQfipoWAeKw2X9sm7X-E822vg78yNnnj4hIkyCG54",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Beats Festival\",\r\n    \"description\": \"Top DJs, Live Bands, Food Stalls | Various Genres | All Ages | 8hrs\",\r\n    \"date\": \"2024-06-20\",\r\n    \"location\": \"Goa\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/list/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Partial Update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyMTU3ODAwLCJpYXQiOjE3MTIxNTY5MDAsImp0aSI6IjhkODE2MWJiMGJmODQzNTFiYWI4YmJlZjkzZDJkY2UxIiwidXNlcl9pZCI6Mn0.YajQfipoWAeKw2X9sm7X-E822vg78yNnnj4hIkyCG54",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Summer Beats \",\r\n    \"description\": \"Top DJs, live performances | EDM, pop, hip-hop | English | 18+ | 8hrs\",\r\n    \"location\": \"Los Angeles\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/list/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Add  Event",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyMTU3ODAwLCJpYXQiOjE3MTIxNTY5MDAsImp0aSI6IjhkODE2MWJiMGJmODQzNTFiYWI4YmJlZjkzZDJkY2UxIiwidXNlcl9pZCI6Mn0.YajQfipoWAeKw2X9sm7X-E822vg78yNnnj4hIkyCG54",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Summer Beats \",\r\n    \"description\": \"Top DJs, live performances | EDM, pop, hip-hop | English | 18+ | 8hrs\",\r\n    \"date\": \"2024-07-28\",\r\n    \"location\": \"Los Angeles\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/post/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Event",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyMTU4NzI5LCJpYXQiOjE3MTIxNTc4MjksImp0aSI6IjNjZTUxYTEzNDc1NDQyZmI5Zjc2MDRjODMxN2U0N2Y3IiwidXNlcl9pZCI6Mn0.AHGTQ0L0cZTOv7K1oxb9C_GiE8BqUl4g1cQM87LmC2Q",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/list/2"
+			},
+			"response": []
+		}
+	]
+}
